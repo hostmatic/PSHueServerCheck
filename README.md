@@ -8,13 +8,11 @@
 
 - ✅Can check basic ICMP
 - ✅Can perform TCP port validation
-- ✅Can check Minecraft Bedrock status
+- ✅Can check Minecraft Bedrock status (Thanks to https://mcsrvstat.us - Go and donate)
 
 ## Planned Features
 
 - ⌛Check Virtual Disk status (Raspberry Pi is missing WSman)
-- ⌛Increase timeout values to not get false positives
-- ⌛Implement somekind of retry logic
 
 ## Getting Started
 
