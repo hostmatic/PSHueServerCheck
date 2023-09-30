@@ -2,7 +2,7 @@
 <img src="https://github.com/hostmatic/PSHueServerCheck/blob/main/logo.jpg" alt="PSHueServerCheck" style="margin: 20px 0;">
 </p>
 
-*PSHueServerCheck*
+**PSHueServerCheck**
 
 ## About
 I wanted to have my Philips Hue LED Light strip light up red, whenever there was a problem with my servers or with the network.
