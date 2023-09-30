@@ -1,5 +1,5 @@
 <p align="center">
-<img src="[./public/logo.jpg](https://github.com/hostmatic/PSHueServerCheck/blob/main/logo.jpg)" alt="PSHueServerCheck" style="margin: 20px 0;">
+<img src="https://github.com/hostmatic/PSHueServerCheck/blob/main/logo.jpg" alt="PSHueServerCheck" style="margin: 20px 0;">
 </p>
 
 **PSHueServerCheck**
