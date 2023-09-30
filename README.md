@@ -13,6 +13,8 @@
 ## Planned Features
 
 - Check Virtual Disk status (Raspberry Pi is missing WSman)
+- Increase timeout values to not get false positives
+- implement somekind of retry logic
 
 ## Getting Started
 
