@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./public/logo.jpg" alt="Overseerr" style="margin: 20px 0;">
+<img src="./public/logo.jpg" alt="PSHueServerCheck" style="margin: 20px 0;">
 </p>
 
 **PSHueServerCheck**
