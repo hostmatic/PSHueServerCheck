@@ -4,6 +4,10 @@
 
 **PSHueServerCheck**
 
+## About
+I wanted to have my Philips Hue LED Light strip light up red, whenever there was a problem with my servers or with the network.
+I could not find anything using the latest Philips Hue API v2 and Powershell, so i decided to make it myself. 
+
 ## Current Features
 
 - ✅Can check basic ICMP
@@ -13,6 +17,8 @@
 ## Planned Features
 
 - ⌛Check Virtual Disk status (Raspberry Pi is missing WSman)
+- ⌛Reset automatically when status changes back
+- ⌛Pulsing red animation???
 
 ## Getting Started
 
