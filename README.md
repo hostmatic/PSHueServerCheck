@@ -25,7 +25,7 @@
 
 ## Preview
 
-<img src="./public/preview.gif">
+<img src="https://github.com/hostmatic/PSHueServerCheck/blob/main/preview.gif">
 
 ## Support
 
