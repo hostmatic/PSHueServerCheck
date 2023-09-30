@@ -23,7 +23,7 @@ I could not find anything using the latest Philips Hue API v2 and Powershell, so
 ## Getting Started
 
 1) Get the Philips Hue light ID and your username
-2) Prepare an Raspberry Pi and install pwsh and the Test-TCPConnection module
+2) Prepare an Raspberry Pi and install pwsh and the Test-TCPConnection module (if using Windows use Test-NetConnection instead)
 3) Create a crontab job (sudo crontab -e)
 4) Adjust values in .ps1 script
 
