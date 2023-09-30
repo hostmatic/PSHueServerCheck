@@ -59,7 +59,6 @@ if ($HueStatus -eq "1") {
     $username = "<username>" # Replace with your username
 
     # Set the light state to red
-    #https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7.3
     $body = @{ "on" = $true; "hue" = 65535; "sat" = 254 }
     Invoke-RestMethod -Uri "http://$bridgeIP/api/$username/lights/$lightNumber/state" -Method PUT -Body ($body | ConvertTo-Json)
 }
