@@ -42,7 +42,7 @@ function ICMPTest {
     Test-ServerConnectivity -ServerName "Server2" -PortNumber 8080
     
     function Minecraft {
-        $Statuscode = Invoke-WebRequest -URI https://api.mcsrvstat.us/bedrock/simple/<server1.contoso.com> | Select-Object -ExpandProperty Statuscode
+        $Statuscode = Invoke-WebRequest -URI https://api.mcsrvstat.us/bedrock/3/<server1.contoso.com> | Select-Object -ExpandProperty Statuscode
         Write-Output "Checking Minecraft server functionality"
         if ($Statuscode -eq "200") {
             Write-Output "Minecraft service running on port 19132 is online" 
