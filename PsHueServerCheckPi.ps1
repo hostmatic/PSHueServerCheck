@@ -1,4 +1,7 @@
 $global:HueStatus = 0
+$global:lightNumber = 18 # Replace with your light number
+$global:bridgeIP = "BridgeIP" # Replace with your bridge IP address
+$global:username = "Username" # Replace with your Philips Hue API username
 
 function ICMPTest {
     Write-Output "Performing basic ICMP network test"    
@@ -55,10 +58,6 @@ function ICMPTest {
 
 #Turn Hue strip red if there is a problem with any of the server checks
 if ($global:HueStatus -eq "1") {
-    
-    $lightNumber = 18 # Replace with your light number
-    $bridgeIP = "BridgeIP" # Replace with your bridge IP address
-    $username = "Username" # Replace with your Philips Hue API username
 
     # Set the light state to red
     #https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/convertto-json?view=powershell-7.3
@@ -69,7 +68,7 @@ if ($global:HueStatus -eq "1") {
 #Get the current light state
 $lightState = Invoke-RestMethod -Uri "http://$bridgeIP/api/$username/lights/$lightNumber" -Method GET
 
-#If HueStatus is 0 and the light is red, turn it off
+#If HueStatus is 0 and the light is red, turn it off - That way we won't accidentally turn off the light if it's another color.
 if ($HueStatus -eq "0" -and $lightState.state.hue -eq 65535 -and $lightState.state.sat -eq 254) {
     # Turn off the light
     $body = @{ "on" = $false }
