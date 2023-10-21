@@ -65,3 +65,13 @@ if ($global:HueStatus -eq "1") {
     $body = @{ "on" = $true; "hue" = 65535; "sat" = 254 }
     Invoke-RestMethod -Uri "http://$bridgeIP/api/$username/lights/$lightNumber/state" -Method PUT -Body ($body | ConvertTo-Json)
 }
+
+#Get the current light state
+$lightState = Invoke-RestMethod -Uri "http://$bridgeIP/api/$username/lights/$lightNumber" -Method GET
+
+#If HueStatus is 0 and the light is red, turn it off
+if ($HueStatus -eq "0" -and $lightState.state.hue -eq 65535 -and $lightState.state.sat -eq 254) {
+    # Turn off the light
+    $body = @{ "on" = $false }
+    Invoke-RestMethod -Uri "http://$bridgeIP/api/$username/lights/$lightNumber/state" -Method PUT -Body ($body | ConvertTo-Json)
+}
